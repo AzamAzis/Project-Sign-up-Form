@@ -113,7 +113,7 @@ This project helped reinforce my understanding of HTML forms.
 
 ### AI Collaboration
 
-I used Claude to generate custom properties for me.
+I used Claude to generate custom properties.
 
 ## Author
 
