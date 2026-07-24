@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta
+		content="width=device-width, initial-scale=1.0, user-scalable=yes"
+		name="viewport"
+	>
+	<meta content="index, follow" name="robots">
+	<meta content="Project: Sign-up Form" name="apple-mobile-web-app-title">
+	<meta content="Project: Sign-up Form" lang="en-US" name="application-name">
+	<title>Project: Sign-up Form</title>
+	<meta
+		content="This is a solution to Project: Sign-up Form on The Odin Project"
+		name="description"
+	>
+	<meta content="Project: Sign-up Form" name="twitter:title">
+	<meta
+		content="This is a solution to Project: Sign-up Form on The Odin Project"
+		name="twitter:description"
+	>
+	<meta
+		content="https://ik.imagekit.io/2p6x3rqkj/Project-Sign-up-Form.jpg"
+		name="twitter:image"
+	>
+	<meta content="summary_large_image" name="twitter:card">
+	<meta content="Project: Sign-up Form" property="og:title">
+	<meta
+		content="This is a solution to Project: Sign-up Form on The Odin Project"
+		property="og:description"
+	>
+	<meta
+		content="https://ik.imagekit.io/2p6x3rqkj/Project-Sign-up-Form.jpg"
+		property="og:image"
+	>
+	<meta content="1200" property="og:image:width">
+	<meta content="600" property="og:image:height">
+	<meta content="website" property="og:type">
+	<meta content="" property="og:url">
+	<link href="styles.css" rel="stylesheet" >
+	 <style>
+	 </style>
+</head>
+<body>
+	<main>
+		<aside>
+			<div class="container">
+				<img alt="odin line" class="logo" src="img/odin-lined.png">
+				<p class="logo-odin">Odin</p>
+			</div>
+			<p class="credit">
+				Photo by
+				<a
+					class="link"
+					href="https://unsplash.com/illustrations/a-cat-wearing-a-green-bucket-hat-and-sunglasses-YdnvVsFQOHc"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+				Alghozy
+			</a>
+				on <a
+					class="link"
+					href="https://unsplash.com/"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+				Unsplash
+			</a>
+			</p>
+		</aside>
+		<section>
+			<div class="wrapper">
+				<p class="note">
+					This is not a real online service! You know you need something like this in your
+					life to help you realize your deepest dreams. Sign up <em>now</em> to get
+					started.
+				</p>
+				<p class="para">You <i>know</i> you want to.</p>
+			</div>
+
+			<form action="#" class="form" method="post">
+				<div class="form__container wrapper">
+					<p class="para">Let's do this</p>
+					<div class="fullname form__section">
+						<div class="firstname">
+							<label class="form__label" for="first_name">First name</label>
+							<input
+								autocomplete="given-name"
+								class="form__input"
+								id="first_name"
+								inputmode="text"
+								maxlength="120"
+								name="first_name"
+								pattern="[A-Za-z]{1, 120}"
+								placeholder="John"
+								required
+								type="text"
+							>
+						</div>
+						<div class="lastname">
+							<label class="form__label" for="last_name">Last name</label>
+							<input
+								autocomplete="family-name"
+								class="form__input"
+								id="last_name"
+								inputmode="text"
+								maxlength="120"
+								name="last_name"
+								pattern="[A-Za-z]{1, 120}"
+								placeholder="Doe"
+								required
+								type="text"
+							>
+						</div>
+					</div>
+					<div class="contacts form__section">
+						<div class="email">
+							<label class="form__label" for="email">Email</label>
+							<input
+								autocomplete="email"
+								class="form__input"
+								id="email"
+								inputmode="email"
+								name="email"
+								pattern="[A-Za-z0-9!#$%&*_+\-]+@[A-Za-z]+\.[A-Za-z]{2,}"
+								placeholder="john_doe123@email.com"
+								required
+								type="text"
+							>
+						</div>
+						<div class="tel">
+							<label class="form__label" for="tel">Phone number</label>
+							<input
+								autocomplete="tel"
+								class="form__input"
+								id="tel"
+								inputmode="tel"
+								name="tel"
+								pattern="(\+?)[0-9]+"
+								placeholder="+123456789"
+								required
+								type="tel"
+							>
+						</div>
+					</div>
+					<div class="password form__section">
+						<div class="new-password">
+							<label class="form__label" for="password">Password</label>
+							<div class="password__wrapper">
+								<input
+									autocomplete="new-password"
+									class="form__input"
+									id="password"
+									inputmode="text"
+									min="6"
+									name="password"
+									pattern=".{6,}"
+									placeholder="••••••"
+									required
+									type="password"
+								>
+								<button class="visibility" type="button"></button>
+							</div>
+						</div>
+						<div class="confirm-password">
+							<label class="form__label" for="confirm-password">Confirm password</label>
+							<div class="password__wrapper">
+								<input
+									autocomplete="new-password"
+									class="form__input"
+									id="confirm-password"
+									inputmode="text"
+									min="6"
+									name="confirm-password"
+									pattern=".{6,}"
+									placeholder="••••••"
+									required
+									type="password"
+								>
+								<button class="visibility" type="button"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="wrapper">
+					<button class="btn" formnovalidate type="submit">Create account</button>
+					<p class="para">Already have an account? <a class="link" href="#">Log in</a></p>
+				</div>
+			</form>
+		</section>
+
+		<script>
+			const form = document.querySelector(".form");
+			form.addEventListener("submit", (e) => {
+				e.preventDefault();
+			});
+		</script>
+	</main>
+</body>
+</html>

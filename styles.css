@@ -1,0 +1,400 @@
+/* ||FONTS */
+@font-face {
+	font-family: "Geomini";
+	src:
+		url("fonts/Geomini/Geomini-Regular.woff2") format("woff2"),
+		url("fonts/Geomini/Geomini-Regular.woff") format("woff");
+	font-display: swap;
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Geomini";
+	src:
+		url("fonts/Geomini/Geomini-Bold.woff2") format("woff2"),
+		url("fonts/Geomini/Geomini-Bold.woff") format("woff");
+	font-display: swap;
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Norse";
+	src:
+		url("fonts/Norse/Norse-Bold.woff2") format("woff2"),
+		url("fonts/Norse/Norse-Bold.woff") format("woff");
+	font-display: swap;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* ||Variables */
+:root {
+	 /* --------------------------------------------------------------------
+		 COLORS
+		 -------------------------------------------------------------------- */
+
+	/* Base neutrals */
+	--color-bg: #ffffff;
+	--color-text-placeholder: #6b7280;
+	--color-odin: #ffffff;
+
+	/* Label color — intentionally distinct from body text */
+	--color-label: #374151;         /* darker slate, used only for form labels */
+
+	/* Button — blue */
+	--color-button-bg: #2563eb;         /* blue-600 */
+	--color-button-bg-hover: #1d4ed8;   /* blue-700 */
+	--color-button-bg-active: #1e40af;  /* blue-800 */
+
+	/* Link — green */
+	--color-link: #16a34a;          /* green-600 */
+	--color-link-hover: #15803d;    /* green-700 */
+
+	/* Form input states */
+	--color-input-bg: #ffffff;
+	--color-input-border: #d1d5db;
+
+	--color-input-focus: #3b82f6;         /* blue focus ring */
+	--color-input-focus-ring: rgba(59, 130, 246, 0.25);
+
+	--color-input-valid: #16a34a;         /* green */
+
+	--color-input-invalid: #dc2626;       /* red */
+
+	/* Box shadow color */
+	--color-shadow: rgba(0, 0, 0, 0.12);
+	--color-shadow-strong: rgba(0, 0, 0, 0.2);
+	--box-shadow-md: 0 3px 8px 3px var(--color-shadow);
+	--box-shadow-focus: 2px 2px 4px 2px var(--color-input-focus-ring);
+
+	/* Spacing — Padding & Margin */
+
+	--space-xs:  0.5rem;    /* 8px */
+	--space-sm:  0.75rem;   /* 12px */
+	--space-md:  1rem;      /* 16px */
+	--space-lg:  1.5rem;    /* 24px */
+	--space-xl:  2rem;      /* 32px */
+
+	/* Fluid spacing — scales smoothly between viewport widths */
+	--font-size-fluid-sm: clamp(1.00rem, calc(0.909rem + 0.455vw), 1.25rem);
+	--font-size-fluid-md: clamp(1.00rem, calc(0.795rem + 1.023vw), 1.56rem);
+	--font-size-fluid-lg: clamp(3.75rem, calc(3.295rem + 2.273vw), 5.00rem);
+
+	/* Semantic aliases */
+	--padding-button: var(--space-sm) var(--space-lg);
+
+	/* Border radius */
+	--radius-sm: 4px;
+}
+
+/* ||RESET */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--color-bg);
+	font: bold 1rem "Geomini", sans-serif;
+	height: 100dvh;
+	line-height: 1.6;
+}
+
+p {
+	hyphens: auto;
+	max-width: 80ch;
+	overflow-wrap: break-word;
+	text-wrap-style: pretty;
+}
+
+img,
+label {
+	display: block;
+}
+
+input,
+button {
+	font-family: inherit;
+	-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	font-weight: inherit;
+}
+
+/* ||LAYOUT */
+main {
+	height: 100%;
+}
+
+/* ||HOVER */
+
+@media (hover: hover) {
+.link:hover {
+	color: var(--color-link-hover);
+}
+
+.btn:hover {
+	background-color: var(--color-button-bg-hover);
+}
+}
+
+/* **ASIDE */
+aside {
+	background: url("img/cat.jpg") center / cover no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 30%;
+	margin-bottom: 2rem;
+	padding: 1.5rem 0 0.25rem;
+}
+
+.container {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.658);
+	display: flex;
+	justify-content: center;
+	height: 40%;
+	gap: var(--space-md);
+	padding: 0.75rem 0;
+}
+
+.logo {
+	height: 100%;
+}
+
+.logo-odin {
+	color: var(--color-odin);
+	font: bold var(--font-size-fluid-lg) "Norse";
+	text-transform: uppercase;
+}
+
+.credit {
+	font-weight: normal;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.link {
+	color: var(--color-link)
+}
+
+/* **NOTE */
+.note,
+.note + .para {
+	font-size: var(--font-size-fluid-md);
+}
+
+.form .para {
+	font-size: var(--font-size-fluid-sm);
+}
+/* ||FORM */
+
+.wrapper {
+	margin-bottom: var(--space-xl);
+	padding: var(--space-xl) var(--space-lg);
+}
+
+.form__container {
+	box-shadow: var(--box-shadow-md);
+}
+
+.form .para {
+	margin-bottom: var(--space-lg);
+}
+
+.form__label {
+	color: var(--color-label);
+	text-transform: uppercase;
+	width: fit-content;
+}
+
+.form__input {
+	background-color: var(--color-input-bg);
+	border: 1px solid var(--color-input-border);
+	border-radius: var(--radius-sm);
+	font-size: 1rem;
+	height: 2.75rem;
+	line-height: 2.75rem;
+	padding: var(--space-xs) var(--space-sm);
+	width: 100%;
+}
+
+.form__input::placeholder {
+	color: var(--color-text-placeholder);
+	font-family: inherit;
+	font-size: 1rem;
+}
+
+.form__input:focus {
+	border: 2px solid var(--color-input-focus);
+	box-shadow: var(--box-shadow-focus);
+	outline: none;
+}
+
+.form__input:user-valid {
+	border-color: var(--color-input-valid);
+}
+
+.form__input:user-invalid {
+	border-color: var(--color-input-invalid);
+}
+
+.firstname:has(.form__input:user-invalid)::after,
+.lastname:has(.form__input:user-invalid)::after,
+.email:has(.form__input:user-invalid)::after,
+.tel:has(.form__input:user-invalid)::after,
+.new-password:has(.form__input:user-invalid)::after,
+.confirm-password:has(.form__input:user-invalid)::after {
+	color: var(--color-input-invalid);
+	content: "Name is required and must be less than or equal to 120 characters.";
+	font-size: 0.75rem;
+	font-weight: normal;
+	height: 10px;
+}
+
+.email:has(.form__input:user-invalid)::after {
+	content: "Email is required"
+}
+
+.tel:has(.form__input:user-invalid)::after {
+	content: "Phone number is required";
+}
+
+.new-password:has(.form__input:user-invalid)::after,
+.confirm-password:has(.form__input:user-invalid)::after {
+	content: "Password is required and must be at least 6 characters."
+}
+
+.firstname,
+.lastname,
+.email,
+.tel,
+.new-password {
+	margin-bottom: var(--space-sm);
+}
+
+.note {
+	margin-bottom: var(--space-md);
+}
+
+.firstname,
+.lastname,
+.email,
+.tel,
+.new-password,
+.confirm-password {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 450px;
+	width: 100%;
+}
+
+.password__wrapper {
+	position: relative;
+}
+
+.visibility {
+	background: url("img/visibility_password/visibility_off-black.svg") center / cover no-repeat;
+	border: none;
+	cursor: pointer;
+	height: 22.5px;
+	opacity: 0.2;
+	position: absolute;
+	right: 2.5%;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+	width: 22.5px;
+	z-index: 9;
+}
+
+/* ||SUBMIT BUTTON */
+.btn {
+	background-color: var(--color-button-bg);
+	border: none;
+	border-radius: var(--radius-sm);
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 1.05rem;
+	margin: 0 auto var(--space-xl);
+	padding: var(--padding-button);
+	text-transform: capitalize;
+}
+
+.btn:active {
+	background-color: var(--color-button-bg-active);
+}
+
+.btn + .para {
+	font-weight: normal;
+}
+
+
+/* || */
+@media (max-width: 37.5) {
+	body {
+		line-height: 1.5;
+	}
+}
+
+@media (min-width: 37.5rem) { /* 600 */
+	.form__section {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.new-password .form__input {
+		margin-bottom: 0;
+	}
+
+	.btn {
+		margin: 0 0 var(--space-xl);
+	}
+}
+
+@media (min-width: 56.25rem) { /* 900 */
+	main {
+		display: flex;
+	}
+
+	aside {
+		height: 100%;
+		width: 35%;
+	}
+
+	section {
+		width: 65%;
+	}
+
+
+	.form__section {
+		gap: 2rem;
+	}
+
+	.btn {
+		margin: 0 0 var(--space-xl)
+	}
+
+	.container {
+		height: 15%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.firstname,
+	.lastname,
+	.email,
+	.tel,
+	.new-password,
+	.confirm-password {
+		margin: 0;
+	}
+}
