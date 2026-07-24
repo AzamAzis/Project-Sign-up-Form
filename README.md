@@ -39,7 +39,7 @@ This project is intended to give you a chance to flex some of the new items youâ
 ### Links
 
 - Solution URL: [Solution](https://github.com/AzamAzis/Project-Sign-up-Form)
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://azamazis.github.io/Project-Sign-up-Form/)
 
 ## My process
 
