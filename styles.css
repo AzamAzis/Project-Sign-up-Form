@@ -395,6 +395,7 @@ aside {
 	.tel,
 	.new-password,
 	.confirm-password {
-		margin: 0;
+		margin-right: 0;
+		margin-left: 0;
 	}
 }
